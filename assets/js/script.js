@@ -8,12 +8,12 @@ window.addEventListener('resize', function() {
 }, true);
 
 window.addEventListener('scroll', function(){
-    var header = document.getElementsByClassName('section-header')[0];
+    var section_header = document.getElementsByClassName('section-header')[0];
     if(this.window.scrollY > 300){
-        header.classList.add('fixed')
-        root.style.setProperty('--height-header', '70px');
+        section_header.classList.add('fixed')
+        section_header.style.setProperty('--height-header', '70px');
     }else{
-        header.classList.remove('fixed')
-        root.removeAttribute('style')
+        section_header.classList.remove('fixed')
+        section_header.removeAttribute('style')
     }
 })
