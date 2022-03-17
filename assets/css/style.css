@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root{
+:root {
     --height-slide: 1170px;
     --height-header: 80px
 }
@@ -22,7 +22,6 @@ html{
 .col-4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
-
 }
 
 .clear {
@@ -30,100 +29,84 @@ html{
 }
 
 @media screen and (max-width: 440px) {
-    .container{
+    .container {
         width: 370px;
         margin: auto;
     }
-
-    #header-nav-items > li{
+    #header-nav-items>li {
         font-size: 10px;
         display: none;
     }
-
-    #header-img img{
+    #header-img img {
         height: 30px;
     }
-
-    #header-img{
+    #header-img {
         height: 45px;
         padding: 8px;
     }
-
-    .icon-nav{
+    .icon-nav {
         margin: 5px 5px 5px 0px !important;
         font-size: 15px !important;
     }
-
     #slide-show .slide-item .slide-content {
         font-size: 22px;
     }
-
     #slide-show .slide-item .slide-btn {
         margin-bottom: 100px !important;
     }
-
-    #slide-show .slide-item img{
+    #slide-show .slide-item img {
         height: 385px !important;
     }
-
-    .section-header{
+    .section-header {
         height: 45px !important;
     }
-
-    #list-proposal{
+    #list-proposal {
         display: block !important;
     }
-
-    .proposal-data1, .proposal-data2{
+    .proposal-data1,
+    .proposal-data2 {
         text-align: center !important;
         font-size: 12px;
     }
-
-    #list-proposal-one span, #list-proposal-three span {
+    #list-proposal-one span,
+    #list-proposal-three span {
         float: none !important;
         display: block;
         margin: auto !important;
     }
-
-    p.proposal-data-title{
+    p.proposal-data-title {
         text-align: center;
     }
-
-    #proposal-content{
+    #proposal-content {
         padding: 0 5px !important;
         font-size: 14px;
     }
-
-    #proposal-title{
+    #proposal-title {
         font-size: 48px !important;
     }
 }
 
 @media screen and (min-width: 960px) {
-    .container{
+    .container {
         width: 750px;
         margin: auto;
     }
-
-    #header-nav-items > li{
+    #header-nav-items>li {
         font-size: 10px;
     }
-
     #slide-show .slide-item .slide-content {
         font-size: 54px;
     }
-} 
+}
 
 @media screen and (min-width: 1440px) {
-    .container{
+    .container {
         width: 1170px;
         margin: auto;
     }
-
-    #header-nav-items > li{
+    #header-nav-items>li {
         font-size: 15px;
     }
-
     #slide-show .slide-item .slide-content {
         font-size: 72px;
     }
@@ -133,7 +116,7 @@ html{
     background: rgb(1, 46, 46);
 }
 
-.section-header{
+.section-header {
     height: var(--height-header);
     position: fixed;
     left: 0;
@@ -142,20 +125,20 @@ html{
     z-index: 1;
 }
 
-#header{
+#header {
     display: flex;
     justify-content: space-between;
 }
 
-#header-img{
+#header-img {
     align-self: center;
 }
 
-#header-nav-items{
+#header-nav-items {
     display: flex;
 }
 
-#header-nav-items > li{
+#header-nav-items>li {
     list-style: none;
     line-height: var(--height-header);
     padding: 0px 10px;
@@ -164,34 +147,34 @@ html{
     color: white;
 }
 
-#header-nav-items > li:hover{
-   background-color: cadetblue;
+#header-nav-items>li:hover {
+    background-color: cadetblue;
 }
 
-#slide{
+#slide {
     height: var(--height-slide);
     overflow: hidden;
     position: relative;
 }
 
-#slide-show{
+#slide-show {
     width: 100%;
     display: flex;
     animation: slideshow 16s infinite;
 }
 
-#slide-show .slide-item div{
+#slide-show .slide-item div {
     min-width: -webkit-fill-available;
 }
 
-#slide-show .slide-item img{
+#slide-show .slide-item img {
     height: 100%;
     width: 100%;
     z-index: -1;
     flex: 1;
 }
 
-#slide-show .slide-item .slide-content{
+#slide-show .slide-item .slide-content {
     position: absolute;
     bottom: 0;
     font-weight: lighter;
@@ -201,7 +184,7 @@ html{
     text-transform: uppercase;
 }
 
-.icon-nav{
+.icon-nav {
     position: absolute;
     top: 0;
     right: 0;
@@ -213,18 +196,18 @@ html{
     transition: .6s;
 }
 
-.icon-nav:hover{
+.icon-nav:hover {
     background-color: rgba(0, 174, 255, 0);
 }
 
-#slide-show .slide-item .slide-btn{
+#slide-show .slide-item .slide-btn {
     position: absolute;
     bottom: 0;
     text-align: center;
     margin-bottom: calc(var(--height-slide)*4/10);
 }
 
-#slide-show .slide-item .slide-btn .get-started{
+#slide-show .slide-item .slide-btn .get-started {
     line-height: 4;
     width: 200px;
     background-color: rgb(0, 174, 255);
@@ -236,7 +219,7 @@ html{
     transition: ease .5s;
 }
 
-#slide-show .slide-item .get-started:hover{
+#slide-show .slide-item .get-started:hover {
     box-shadow: inset 200px 0 0 0 rgba(252, 226, 226, 0.5);
 }
 
@@ -244,55 +227,58 @@ html{
     min-width: -webkit-fill-available;
 }
 
- /* Animation Slide */
- 
+
+/* Animation Slide */
+
 @keyframes slideshow {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    30%{
+    30% {
         transform: translateX(0);
     }
-    35%{
+    35% {
         transform: translateX(-100%);
     }
-    75%{
+    75% {
         transform: translateX(-100%);
     }
-    80%{
+    80% {
         transform: translateX(-200%)
     }
-    100%{
+    100% {
         transform: translateX(-200%)
     }
 }
+
 
 /* PROPOSAL */
 
-#proposal{
-    height: fit-content; 
+#proposal {
+    height: fit-content;
     padding: 100px 0px;
 }
 
-#proposal-title, #proposal-content{
+#proposal-title,
+#proposal-content {
     text-align: center;
 }
 
-#proposal-content{
+#proposal-content {
     padding: 0 100px;
 }
 
-#proposal-title{
+#proposal-title {
     font-size: 54px;
     font-weight: 100;
     color: rgba(0, 0, 0, 0.63);
 }
 
-#list-proposal{
+#list-proposal {
     display: flex;
 }
 
-hr{
+hr {
     width: 10%;
     margin: auto;
     height: 1px;
@@ -302,8 +288,8 @@ hr{
     background-color: black;
 }
 
-#list-proposal span{
-    background-color: rgb(0,140,186);
+#list-proposal span {
+    background-color: rgb(0, 140, 186);
     padding: 10px;
     width: 60px;
     height: 60px;
@@ -311,34 +297,34 @@ hr{
     text-align: center;
 }
 
-#list-proposal-one{
+#list-proposal-one {
     flex: 1;
 }
 
-#list-proposal-one div{
+#list-proposal-one div {
     padding: 30px 0;
 }
 
-#list-proposal-three div{
+#list-proposal-three div {
     padding: 30px 0;
 }
 
-#list-proposal-three span{
+#list-proposal-three span {
     float: right;
     margin-left: 20px;
 }
 
-#list-proposal-one span{
+#list-proposal-one span {
     float: left;
     margin-right: 20px;
 }
 
-#list-proposal-two{
+#list-proposal-two {
     flex: 1;
     position: relative;
 }
 
-#list-proposal-two-slide{
+#list-proposal-two-slide {
     position: absolute;
     width: 271px;
     height: 469px;
@@ -350,56 +336,63 @@ hr{
     overflow: hidden;
 }
 
-#proposal-slide-show{
+#proposal-slide-show {
     display: flex;
     animation: slideshow 16s infinite;
 }
 
-#list-proposal-three{
+#list-proposal-three {
     flex: 1;
 }
 
-#list-proposal{
+#list-proposal {
     padding-top: 100px;
 }
 
-.proposal-data1{
+.proposal-data1 {
     text-align: left;
 }
 
-.proposal-data2, #list-proposal-three{
+.proposal-data2,
+#list-proposal-three {
     text-align: right;
 }
 
-.proposal-data-title{
+.proposal-data-title {
     font-size: 32px;
     font-weight: lighter;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
+
 /* STATISTICAL */
 
-#statistical{
-    height: 500px;
+#statistical {
+    height: fit-content;
     background-color: blueviolet;
+    background: url("../img/counters-bg.jpg") center center / cover no-repeat;
+    color: white;
 }
 
+
 /* HISTORY */
+
 #history {
     padding: 100px 0px;
     height: fit-content;
     background: url("../img/timeline.jpg") top center / cover no-repeat;
 }
 
-#history-title{
+#history-title {
     font-size: 54px;
     font-weight: lighter;
     color: rgba(0, 0, 0, 0.63);
     margin-bottom: 20px;
 }
 
-#history-title, #history-content {
+#history-title,
+#history-content {
     text-align: center;
     color: white;
 }
@@ -418,6 +411,7 @@ hr{
     justify-content: center;
     align-items: center;
 }
+
 .timeline {
     position: relative;
     color: white;
@@ -456,13 +450,13 @@ hr{
     left: -4px;
 }
 
-#history .timeline-badge{
+#history .timeline-badge {
     position: absolute;
     right: -6px;
     top: 15px;
 }
 
-#history .timeline-badge i{
+#history .timeline-badge i {
     font-size: 10px;
     color: antiquewhite;
 }
@@ -494,7 +488,10 @@ hr{
 #history .timeline-footer {
     margin-top: 15px;
 }
+
+
 /* END HISTORY */
+
 
 /* PORTFOLIO */
 
@@ -503,4 +500,46 @@ hr{
     background-color: aqua;
 }
 
+
 /* END PORTFOLIO */
+
+#statistical .container {
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+.statistical-item {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+
+#statistical span {
+    background: transparent;
+    padding: 20px 24px;
+    border-radius: 90%;
+    border: solid 2px;
+}
+
+#statistical span:hover {
+    background-color: #008cba;
+    transition: 0.5s;
+    border: 2px solid transparent;
+}
+
+.statistical-item-info {
+    margin-top: 30px;
+}
+
+.statistical-item-info-number {
+    font-size: 30px;
+}
+
+
+/* ABOUT */
+
+#about {
+    height: 200px;
+    background-color: blueviolet;
+}
