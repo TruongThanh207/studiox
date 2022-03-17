@@ -131,6 +131,8 @@ html{
     min-width: -webkit-fill-available;
 }
 
+ /* Animation Slide */
+ 
 @keyframes slideshow {
     0%{
         transform: translateX(0);
@@ -196,11 +198,6 @@ hr{
     text-align: center;
 }
 
-/* #list-proposal span{
-
-} */
-
-
 #list-proposal-one{
     flex: 1;
 }
@@ -225,6 +222,24 @@ hr{
 
 #list-proposal-two{
     flex: 1;
+    position: relative;
+}
+
+#list-proposal-two-slide{
+    position: absolute;
+    width: 271px;
+    height: 469px;
+    top: 0;
+    left: 0;
+    margin-top: 90px;
+    margin-left: 54px;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+#proposal-slide-show{
+    display: flex;
+    animation: slideshow 16s infinite;
 }
 
 #list-proposal-three{
