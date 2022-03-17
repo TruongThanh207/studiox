@@ -9,6 +9,7 @@ window.addEventListener('resize', function() {
 
 window.addEventListener('scroll', function(){
     var section_header = document.getElementsByClassName('section-header')[0];
+
     if(this.window.scrollY > 300){
         section_header.classList.add('fixed')
         section_header.style.setProperty('--height-header', '70px');
