@@ -389,7 +389,7 @@ hr{
 #history {
     padding: 100px 0px;
     height: fit-content;
-    background: url("assets/img/timeline.jpg") top center / cover no-repeat;
+    background: url("../img/timeline.jpg") top center / cover no-repeat;
 }
 
 #history-title{
