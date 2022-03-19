@@ -13,6 +13,22 @@ html{
     --height-header: 80px
 }
 
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+
+}
+
+.clear {
+    clear: both;
+}
+
 @media screen and (max-width: 440px) {
     .container{
         width: 370px;
@@ -189,7 +205,7 @@ html{
     position: absolute;
     top: 0;
     right: 0;
-    margin: 25px 20px 25px 0px;
+    margin: 15px 20px 15px 0px;
     font-size: 20px;
     color: white;
     padding: 10px;
@@ -267,7 +283,7 @@ html{
 }
 
 #proposal-title{
-    font-size: 72px;
+    font-size: 54px;
     font-weight: 100;
     color: rgba(0, 0, 0, 0.63);
 }
@@ -368,3 +384,123 @@ hr{
     height: 500px;
     background-color: blueviolet;
 }
+
+/* HISTORY */
+#history {
+    padding: 100px 0px;
+    height: fit-content;
+    background: url("/assets/img/timeline.jpg") top center / cover no-repeat;
+}
+
+#history-title{
+    font-size: 54px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.63);
+    margin-bottom: 20px;
+}
+
+#history-title, #history-content {
+    text-align: center;
+    color: white;
+}
+
+#history-content {
+    margin-bottom: 100px;
+}
+
+.time-line-year {
+    width: 120px;
+    height: 120px;
+    border-radius: 90%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeline {
+    position: relative;
+    color: white;
+    list-style: none;
+}
+
+.timeline::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    left: 50%;
+}
+
+#history .container ul>li {
+    position: relative;
+    margin-bottom: 20px;
+    width: 50%;
+    float: left;
+}
+
+#history .timeline-panel {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 10px;
+    width: 90%;
+    transition: all 300ms ease-in-out;
+}
+
+#history .timeline-panel:hover {
+    background-color: #008cba;
+}
+
+.timeline-reverse .timeline-badge {
+    left: -4px;
+}
+
+#history .timeline-badge{
+    position: absolute;
+    right: -6px;
+    top: 15px;
+}
+
+#history .timeline-badge i{
+    font-size: 10px;
+    color: antiquewhite;
+}
+
+#history li.timeline-reverse {
+    float: right;
+    margin-top: 60px;
+}
+
+#history li.timeline-reverse .timeline-panel {
+    float: right;
+}
+
+#history .timeline ul>li:nth-child(2) {
+    margin-top: 60px;
+}
+
+#history .timeline-body {
+    font-size: 14px;
+    line-height: 2;
+}
+
+#history .timeline-heading {
+    line-height: 2;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#history .timeline-footer {
+    margin-top: 15px;
+}
+/* END HISTORY */
+
+/* PORTFOLIO */
+
+#portfolio {
+    height: 300px;
+    background-color: aqua;
+}
+
+/* END PORTFOLIO */
