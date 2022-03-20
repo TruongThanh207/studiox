@@ -28,6 +28,21 @@ html {
     clear: both;
 }
 
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+}
+
+.clear {
+    clear: both;
+}
+
 @media screen and (max-width: 440px) {
     .container {
         width: 370px;
