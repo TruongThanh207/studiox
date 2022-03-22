@@ -17,6 +17,7 @@ html {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .col-4 {
@@ -32,11 +33,6 @@ html {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-
-.col-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%;
 }
 
 .clear {
@@ -112,6 +108,15 @@ html {
     #slide-show .slide-item .slide-content {
         font-size: 54px;
     }
+    .col-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    #pricing ul {
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -124,6 +129,14 @@ html {
     }
     #slide-show .slide-item .slide-content {
         font-size: 72px;
+    }
+    .col-3 {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+    #pricing ul {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -666,3 +679,109 @@ hr {
         width: var(--width-skill);
     }
 }
+
+/* PRICING */
+
+#pricing {
+    height: fit-content;
+    background-color: #ffffff;
+    padding: 100px 0px;
+}
+
+#pricing .price-title{
+    font-size: 54px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+#pricing .price-content{
+    text-align: center;
+
+}
+
+#pricing .option-price{
+    padding-top: 100px;
+}
+
+#pricing ul {
+    list-style: none;
+    text-align: center;
+    color: white;
+    background-color: #6a6a6a;
+}
+
+#pricing ul h3 {
+    font-weight: 200;
+    font-size: 26px;
+}
+
+#pricing ul p {
+    font-weight: 300;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#pricing ul li {
+    padding: 20px 0px;
+}
+
+#pricing ul li:first-child {
+    padding-bottom: 20px;
+}
+
+#pricing ul:hover {
+    background-color: #008cba;
+}
+
+#pricing ul:hover::before {
+    border-bottom: 60px solid #008cba;
+}
+
+#pricing ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+}
+
+#pricing .option-price-item {
+    position: relative;
+}
+
+#pricing .price-item {
+    padding: 16px 13px;
+    border: 1px solid #6a6a6a;
+    border-radius: 50%;
+    font-weight: 200;
+    width: fit-content;
+    position: absolute;
+    background-color: white;
+    top: -32px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 46px;
+    line-height: 65px;
+}
+
+#pricing ul::before {
+    content: " ";
+    display: block;
+    border-left: 103px solid white;
+    border-right: 103px solid white;
+    border-bottom: 60px solid #6a6a6a;
+}
+
+#pricing button {
+    padding: 16px 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    box-shadow: inset 0 0 0 0 rgb(253, 253, 253);
+    transition: ease 1s;
+}
+
+#pricing button:hover {
+    box-shadow: inset 150px 0 0 0 rgb(253, 253, 253);
+    color: #6a6a6a;
+}
+
+/* END PRICING */
