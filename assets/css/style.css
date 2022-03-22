@@ -680,7 +680,7 @@ hr {
 #pricing {
     height: fit-content;
     background-color: #ffffff;
-    padding: 100px 0px;
+    padding: 0px 0px 100px 0px;
 }
 
 #pricing .price-title{
@@ -852,7 +852,6 @@ hr {
     padding: 10px 13px;
     border-radius: 50%;
     background-color: #ffffff;
-    margin-bottom: 200px;
 }
 
 #portfolio .snap-chat i {
@@ -860,11 +859,36 @@ hr {
 }
 
 .portfolio-slide-img-info {
-    padding: 100px 100px;
     text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.portfolio-slide-img-info:hover {
+    opacity: 0.9;
 }
 
 .portfolio-slide-img:hover {
     opacity: 90%;
     transition: 0.5s;
+}
+
+#portfolio .portfolio-slide-img {
+    min-width: 33.33333%;
+    position: relative;
+}
+
+#portfolio .portfolio-slide-img img{
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio .portfolio-slide-img-info .infor-content-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
