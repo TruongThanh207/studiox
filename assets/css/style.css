@@ -680,7 +680,6 @@ hr {
 #pricing {
     height: fit-content;
     background-color: #ffffff;
-    padding: 0px 0px 100px 0px;
 }
 
 #pricing .price-title{
@@ -891,4 +890,77 @@ hr {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+/* SOCIAL */
+
+.parallax {
+    background-image: url("../img/blog-text.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#social .social-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#social .social-panel i {
+    position: absolute;
+    color:rgb(0, 174, 255);
+    transform: scale(5);
+    left: 50%;
+    padding-top: 30px;
+}
+
+#social .social-panel .social-slide {
+    width: 50%;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    text-align: center;
+}
+
+#social .social-panel .slide-items {
+    animation: slidesocial 12s infinite;
+    display: flex;
+}
+
+#social .social-panel .social-slide .social-content {
+    min-width: 100%;
+}
+
+#social .social-panel .social-slide .social-content span {
+    color: #008CBA;
+}
+
+@keyframes slidesocial {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
