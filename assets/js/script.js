@@ -17,3 +17,25 @@ window.addEventListener('scroll', function(){
         section_header.removeAttribute('style')
     }
 })
+
+var nav_mobile = document.querySelector('#nav-mobile');
+
+var nav_menu = document.querySelector('.icon-nav')
+
+nav_menu.onclick = function(){
+    this.style.display = 'none';
+    nav_mobile.classList.add("menu-mobile")
+
+    for (let i = 0; i < nav_mobile.children.length; i++){
+        nav_mobile.children[i].style.display = 'block'
+    }
+};
+
+var nav_closed = document.querySelector('.icon-close').onclick = function(){
+    this.style.display = 'none'
+    nav_mobile.classList.remove("menu-mobile")
+    for (let i = 0; i < nav_mobile.children.length; i++){
+        nav_mobile.children[i].style.display = 'none'
+    }
+    nav_menu.style.display = 'block'
+};
