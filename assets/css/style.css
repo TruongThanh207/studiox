@@ -675,26 +675,27 @@ hr {
     }
 }
 
+
 /* PRICING */
 
 #pricing {
     height: fit-content;
     background-color: #ffffff;
+
 }
 
-#pricing .price-title{
+#pricing .price-title {
     font-size: 54px;
     font-weight: 100;
     color: rgba(0, 0, 0, 0.63);
     text-align: center;
 }
 
-#pricing .price-content{
+#pricing .price-content {
     text-align: center;
-
 }
 
-#pricing .option-price{
+#pricing .option-price {
     padding-top: 100px;
 }
 
@@ -778,7 +779,9 @@ hr {
     color: #6a6a6a;
 }
 
+
 /* END PRICING */
+
 #portfolio {
     height: fit-content;
     padding: 100px 0px;
@@ -806,8 +809,11 @@ hr {
     50% {
         transform: translateX(-66.66666%);
     }
-    100% {
+    75% {
         transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
 
@@ -878,6 +884,7 @@ hr {
     min-width: 33.33333%;
     position: relative;
 }
+
 
 #portfolio .portfolio-slide-img img{
     width: 100%;
@@ -964,3 +971,4 @@ hr {
         transform: translateX(0);
     }
 }
+
