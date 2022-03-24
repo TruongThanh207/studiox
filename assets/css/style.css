@@ -39,6 +39,34 @@ html {
     clear: both;
 }
 
+#nav-mobile div {
+    display: none;
+}
+
+#nav-mobile div:not(:first-child) a{
+    padding: 15px 0 15px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+}
+
+#nav-mobile div:not(:first-child):hover {
+    background-color: #008CBA;
+    color: #ffffff;
+}
+
+#nav-mobile .icon-close {
+    text-align: right;
+    color: #6a6a6a;
+    margin: 5px 5px 5px 0px;
+    padding: 10px;
+    font-size: 15px
+} 
+
+
 @media screen and (max-width: 440px) {
     .container {
         width: 370px;
@@ -95,6 +123,15 @@ html {
     #proposal-title {
         font-size: 48px !important;
     }
+
+    .menu-mobile{
+        background-color: #f1f1f1e6;
+        height: 1000px;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        transition: 1s ease-in-out;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -112,6 +149,9 @@ html {
         flex-basis: 50%;
         max-width: 50%;
     }
+    .icon-nav {
+        display: none !important;
+    }    
     #pricing ul {
         margin-left: 60px;
         margin-right: 60px;
@@ -134,6 +174,9 @@ html {
         flex-basis: 25%;
         max-width: 25%;
     }
+    .icon-nav {
+        display: none !important;
+    }    
     #pricing ul {
         margin-left: 20px;
         margin-right: 20px;
