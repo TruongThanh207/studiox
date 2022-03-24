@@ -17,6 +17,7 @@ html {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .col-4 {
@@ -34,14 +35,37 @@ html {
     flex-wrap: wrap;
 }
 
-.col-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%;
-}
-
 .clear {
     clear: both;
 }
+
+#nav-mobile div {
+    display: none;
+}
+
+#nav-mobile div:not(:first-child) a{
+    padding: 15px 0 15px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+}
+
+#nav-mobile div:not(:first-child):hover {
+    background-color: #008CBA;
+    color: #ffffff;
+}
+
+#nav-mobile .icon-close {
+    text-align: right;
+    color: #6a6a6a;
+    margin: 5px 5px 5px 0px;
+    padding: 10px;
+    font-size: 15px
+} 
+
 
 @media screen and (max-width: 440px) {
     .container {
@@ -99,6 +123,15 @@ html {
     #proposal-title {
         font-size: 48px !important;
     }
+
+    .menu-mobile{
+        background-color: #f1f1f1e6;
+        height: 1000px;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        transition: 1s ease-in-out;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -112,6 +145,18 @@ html {
     #slide-show .slide-item .slide-content {
         font-size: 54px;
     }
+    .col-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    .icon-nav {
+        display: none !important;
+    }    
+    #pricing ul {
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -124,6 +169,17 @@ html {
     }
     #slide-show .slide-item .slide-content {
         font-size: 72px;
+    }
+    .col-3 {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+    .icon-nav {
+        display: none !important;
+    }    
+    #pricing ul {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -662,6 +718,113 @@ hr {
     }
 }
 
+
+/* PRICING */
+
+#pricing {
+    height: fit-content;
+    background-color: #ffffff;
+
+}
+
+#pricing .price-title {
+    font-size: 54px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+#pricing .price-content {
+    text-align: center;
+}
+
+#pricing .option-price {
+    padding-top: 100px;
+}
+
+#pricing ul {
+    list-style: none;
+    text-align: center;
+    color: white;
+    background-color: #6a6a6a;
+}
+
+#pricing ul h3 {
+    font-weight: 200;
+    font-size: 26px;
+}
+
+#pricing ul p {
+    font-weight: 300;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#pricing ul li {
+    padding: 20px 0px;
+}
+
+#pricing ul li:first-child {
+    padding-bottom: 20px;
+}
+
+#pricing ul:hover {
+    background-color: #008cba;
+}
+
+#pricing ul:hover::before {
+    border-bottom: 60px solid #008cba;
+}
+
+#pricing ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+}
+
+#pricing .option-price-item {
+    position: relative;
+}
+
+#pricing .price-item {
+    padding: 16px 13px;
+    border: 1px solid #6a6a6a;
+    border-radius: 50%;
+    font-weight: 200;
+    width: fit-content;
+    position: absolute;
+    background-color: white;
+    top: -32px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 46px;
+    line-height: 65px;
+}
+
+#pricing ul::before {
+    content: " ";
+    display: block;
+    border-left: 103px solid white;
+    border-right: 103px solid white;
+    border-bottom: 60px solid #6a6a6a;
+}
+
+#pricing button {
+    padding: 16px 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    box-shadow: inset 0 0 0 0 rgb(253, 253, 253);
+    transition: ease 1s;
+}
+
+#pricing button:hover {
+    box-shadow: inset 150px 0 0 0 rgb(253, 253, 253);
+    color: #6a6a6a;
+}
+
+
+/* END PRICING */
+
 #portfolio {
     height: fit-content;
     padding: 100px 0px;
@@ -689,8 +852,11 @@ hr {
     50% {
         transform: translateX(-66.66666%);
     }
-    100% {
+    75% {
         transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
 
@@ -734,7 +900,6 @@ hr {
     padding: 10px 13px;
     border-radius: 50%;
     background-color: #ffffff;
-    margin-bottom: 200px;
 }
 
 #portfolio .snap-chat i {
@@ -742,11 +907,111 @@ hr {
 }
 
 .portfolio-slide-img-info {
-    padding: 100px 100px;
     text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.portfolio-slide-img-info:hover {
+    opacity: 0.9;
 }
 
 .portfolio-slide-img:hover {
     opacity: 90%;
     transition: 0.5s;
 }
+
+#portfolio .portfolio-slide-img {
+    min-width: 33.33333%;
+    position: relative;
+}
+
+
+#portfolio .portfolio-slide-img img{
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio .portfolio-slide-img-info .infor-content-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* SOCIAL */
+
+.parallax {
+    background-image: url("../img/blog-text.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#social .social-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#social .social-panel i {
+    position: absolute;
+    color:rgb(0, 174, 255);
+    transform: scale(5);
+    left: 50%;
+    padding-top: 30px;
+}
+
+#social .social-panel .social-slide {
+    width: 50%;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    text-align: center;
+}
+
+#social .social-panel .slide-items {
+    animation: slidesocial 12s infinite;
+    display: flex;
+}
+
+#social .social-panel .social-slide .social-content {
+    min-width: 100%;
+}
+
+#social .social-panel .social-slide .social-content span {
+    color: #008CBA;
+}
+
+@keyframes slidesocial {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
