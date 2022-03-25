@@ -536,12 +536,69 @@
     </div>
     
     <!-- Contact -->
-    <div id="contact" style="height: 500px; background-color: aqua;"></div>
+    <div id="contact">
+        <div class="container">
+            <p class="contact-title">Pricing Table</p>
+            <hr>
+            <p class="contact-content">Lorem Ipsum is simply dummy text of the printing and typesetting Quisque enim dolor, mauris ac sagittis erat pulvinar leo, sed ultrices ipsum elit sed leo dolor in justo pretium et elit.</p>
+            <div class="row">
+                <div class="contact-item col-4">
+                    <input type="text" placeholder="You Name">
+                </div>
+                <div class="contact-item col-4">
+                    <input type="text" placeholder="Email Address">
+                </div>
+                <div class="contact-item col-4">
+                    <input type="text" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="contact-message">
+                <textarea name="message" id="message" placeholder="Messages" rows="5"></textarea>
+            </div>
+            <div class="btn-contact">
+                <button class="btn-submit">SUBMIT</button>
+            </div>
+        </div>
+    </div>
     <!-- Map -->
+    <div id="map"></div>
+
     <!-- Address -->
+    <div id="address">
+        <div class="row">
+            <div class="address-item col-4">
+                <span><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+                <p>+01 331 63 23 136</p>
+            </div>
+            <div class="address-item col-4">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <p>Unbelievable street 1/2 011-525 New York</p>
+            </div>
+            <div class="address-item col-4">
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <p>support@StudioX.com</p>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copy-right">Copyright © 2016 StudioX. All rights reserved.</div>
+            <div class="icon-footer">
+                <ul class="list-icon-footer">
+                    <li><a href="#."><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#."><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#."><i class="fa-brands fa-google-plus"></i></a></li>
+                    <li><a href="#."><i class="fa-brands fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOlk_hZt-6AKgn8qfseJUkGfE_g53s4m0&callback=initMap&v=weekly" async></script>
+    <script src="assets/js/map.js"></script>
 </body>
 
 </html>

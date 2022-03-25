@@ -21,8 +21,8 @@ html {
 }
 
 .col-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: 30%;
+    max-width: 30%;
 }
 
 .clear {
@@ -724,7 +724,6 @@ hr {
 #pricing {
     height: fit-content;
     background-color: #ffffff;
-
 }
 
 #pricing .price-title {
@@ -1015,3 +1014,144 @@ hr {
     }
 }
 
+/* CONTACT */
+
+#contact {
+    height: fit-content;
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+#contact .contact-title {
+    font-size: 54px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+#contact .contact-content {
+    text-align: center;
+}
+
+#contact .row .contact-item {
+    margin-top: 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#contact .row .contact-item input{
+    width: 100%;
+    line-height: 4;
+    padding-left: 10px;
+    border: none;
+}
+
+#contact .row .contact-item input:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+    outline: 0;
+}
+
+.contact-message {
+    margin-top: 50px;
+}
+
+.contact-message textarea {
+    width: 100%;
+    line-height: 2;
+    padding: 20px 10px;
+    font-size: 15px;
+    resize: none;
+    border-color: #c8c8c8;
+}
+
+.contact-message textarea:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+    outline: 0;
+}
+
+#contact .btn-contact {
+    text-align: center;
+}
+
+#contact .btn-submit {
+    line-height: 4;
+    border-color: #008CBA;
+    border-width: 2px;
+    color:#008CBA;
+    background-color: transparent;
+    width: 150px;
+    margin-top: 50px;
+    box-shadow: inset 0 0 0 0 #008CBA;
+    transition: 0.5s ease-in
+}
+
+#contact .btn-submit:hover {
+    box-shadow: inset -150px 0 0 0 #008CBA;
+    color: white;
+}
+/* END CONTACT */
+
+/* MAP */
+#map {
+    height: 500px;
+    width: 100%;
+}
+/* END MAP */
+
+/* ADDRESS */
+#address {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#address span {
+    font-size: 50px;
+}
+
+#address p {
+    font-size: 20px;
+    padding: 0 100px;
+}
+/* END ADDRESS */
+footer {
+    height: 80px;
+    background-color: #008CBA;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px 0;
+}
+
+footer a:hover {
+    background-color: #6a6a6a;
+}
+
+footer i {
+   font-size: 15px;
+   width: 30px;
+}
+
+.icon-footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+}
