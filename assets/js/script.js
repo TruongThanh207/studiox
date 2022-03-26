@@ -1,4 +1,5 @@
 var root = document.querySelector(':root');
+
 window.addEventListener('resize', function() {
     var heightSlide = $('#slide-show')[0].children[0].childNodes[1].clientHeight
 
