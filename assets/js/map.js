@@ -12,5 +12,3 @@ function initMap() {
       map: map,
     });
 }
-
-console.log(1)

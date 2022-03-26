@@ -20,21 +20,6 @@ html {
     justify-content: space-between;
 }
 
-.col-4 {
-    flex-basis: 30%;
-    max-width: 30%;
-}
-
-.clear {
-    clear: both;
-}
-
-.row {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .clear {
     clear: both;
 }
@@ -71,6 +56,14 @@ html {
     .container {
         width: 370px;
         margin: auto;
+    }
+    .col-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    .col-12 {
+        max-width: 100%;
+        flex-basis: 100%;
     }
     #header-nav-items>li {
         font-size: 10px;
@@ -132,12 +125,107 @@ html {
         width: 100%;
         transition: 1s ease-in-out;
     }
+    #social .social-panel .social-slide {
+        width: 100% !important;
+        font-size: 12px;
+    }
+    footer .copy-right {
+        font-size: 10px;
+    }
+    footer {
+        height: 40px !important;
+    }
+    footer a {
+        display: flex;
+    }
+    footer i {
+        font-size: 10px !important;
+        width: 20px !important;
+    }
+    .option-price-item {
+        padding: 40px 60px;
+        margin-bottom: 50px;
+    }
+    .price-content {
+        font-size: 12px;
+    }
+    .price-title {
+        font-size: 48px;
+    }
+    #address {
+        padding: 0 0 !important;
+    }
+    #address span {
+        font-size: 30px !important;
+    }
+    #address p {
+        font-size: 12px !important;
+    }
+    #address .address-item {
+        padding: 20px 0;
+    }
+    .contact-content {
+        font-size: 12px;
+    }
+    .contact-title {
+        font-size: 48px;
+    }
+    #history-content {
+        font-size: 12px;
+    }
+    #history-title {
+        font-size: 48px !important;
+    }
+    .about-info p:last-child {
+        font-size: 12px !important;
+    }
+    .our-team {
+        font-size: 48px !important;
+    }
+    #statistical {
+        padding: 50px 0;
+    }
+    .statistical-item {
+        text-align: center;
+        margin: auto;
+    }
+    .portfolio-info .title {
+        font-size: 48px;
+    }
+    .portfolio-info p:last-child {
+        font-size: 12px;
+    }
+    #portfolio .portfolio-slide-img {
+        min-width: 100% !important;
+    }
+    .portfolio-slide {
+        animation: slide-port-mobile 20s infinite !important;
+    }
+    .about-members-img-info {
+        font-size: 10px;
+    }
+    .about-member-info-intro-text p {
+        font-size: 12px;
+    }
+    .about-member-info {
+        display: block !important;
+    }
+    .border-none {
+        height: 40px !important;
+    }
+    .border-none p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 960px) {
     .container {
         width: 750px;
         margin: auto;
+    }
+    .col-4 {
+        flex-basis: 30%;
+        max-width: 30%;
     }
     #header-nav-items>li {
         font-size: 10px;
@@ -157,6 +245,11 @@ html {
         margin-right: 60px;
         margin-bottom: 100px;
     }
+    .statistical-item {
+        flex: 1;
+        text-align: center;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -174,12 +267,21 @@ html {
         flex-basis: 25%;
         max-width: 25%;
     }
+    .col-4 {
+        flex-basis: 30%;
+        max-width: 30%;
+    }
     .icon-nav {
         display: none !important;
     }    
     #pricing ul {
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .statistical-item {
+        flex: 1;
+        text-align: center;
+        margin: auto;
     }
 }
 
@@ -575,12 +677,6 @@ hr {
     height: 300px;
 }
 
-.statistical-item {
-    flex: 1;
-    text-align: center;
-    margin: auto;
-}
-
 #statistical span {
     background: transparent;
     padding: 20px 24px;
@@ -853,6 +949,30 @@ hr {
     }
     75% {
         transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-port-mobile {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(-100%);
+    }
+    30% {
+        transform: translateX(-200%);
+    }
+    45% {
+        transform: translateX(-300%);
+    }
+    60% {
+        transform: translateX(-400%);
+    }
+    75% {
+        transform: translateX(-500%);
     }
     100% {
         transform: translateX(0%);
